@@ -1,153 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMPLITIX | Dashboard</title>
-    <style>
-        :root {
-            --bg-dark: #0f172a;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --accent-blue: #38bdf8;
-            --accent-purple: #818cf8;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-        }
-
-        body {
-            background: radial-gradient(circle at top right, #1e293b, #0f172a);
-            color: var(--text-main);
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 2rem;
-            min-height: 100vh;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            letter-spacing: 8px;
-            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        /* Main Hero Box */
-        .hero-box {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 12px;
-            max-width: 900px;
-            margin: 0 auto 3rem auto;
-            text-align: center;
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
-        }
-
-        .hero-box p {
-            font-size: 1.5rem;
-            color: var(--text-main);
-            margin-bottom: 10px;
-        }
-
-        .hero-box span {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-
-        /* Grid Layout */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Product Cards */
-        .card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-
-        .card .subtitle {
-            color: var(--text-dim);
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        /* Buttons */
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 8px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .btn-download {
-            background: transparent;
-            border: 1px solid var(--accent-blue);
-            color: var(--accent-blue);
-        }
-
-        .btn-download:hover {
-            background: var(--accent-blue);
-            color: var(--bg-dark);
-        }
-
-        .btn-tutorial {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--text-main);
-        }
-
-        .btn-tutorial:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        /* Visual Accents */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
-        }
-    </style>
-</head>
 <body>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <div class="header">
         <h1>SIMPLITIX</h1>
@@ -158,6 +11,8 @@
         <span>Advanced tools designed for the next generation of digital infrastructure.</span>
     </section>
 
+    <div class="grid-container">
+        
         <div class="card">
             <i class="fas fa-terminal" style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLI_SHELL</h3>
@@ -173,6 +28,7 @@
         </div>
 
         <div class="card">
+            <i class="fas fa-chart-line" style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLI_FIN</h3>
             <span class="subtitle">Financial Clarity</span>
             <div class="btn-group">
@@ -182,6 +38,7 @@
         </div>
 
         <div class="card">
+            <i class="fas fa-file-alt" style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLI_DOC</h3>
             <span class="subtitle">Documents Made Easy</span>
             <div class="btn-group">
@@ -191,6 +48,7 @@
         </div>
 
         <div class="card">
+            <i class="fas fa-microscope" style="color: var(--accent-purple); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLIAN_ALYZER</h3>
             <span class="subtitle">Data Processing</span>
             <div class="btn-group">
@@ -200,6 +58,7 @@
         </div>
 
         <div class="card">
+            <i class="fas fa-envelope" style="color: var(--accent-purple); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLI_MAIL</h3>
             <span class="subtitle">Communication Reimagined</span>
             <div class="btn-group">
@@ -209,14 +68,13 @@
         </div>
 
         <div class="card">
+            <i class="fas fa-database" style="color: var(--accent-purple); font-size: 2rem; margin-bottom: 1rem;"></i>
             <h3>SIMPLI_SQL</h3>
-            <span class="subtitle">Communication Reimagined</span>
+            <span class="subtitle">Database Optimization</span>
             <div class="btn-group">
                 <a href="#" class="btn btn-download">Download</a>
                 <a href="#" class="btn btn-tutorial">Tutorial</a>
             </div>
         </div>
-    </div>
 
-</body>
-</html>
+    </div> </body>
