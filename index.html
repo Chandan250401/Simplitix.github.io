@@ -24,21 +24,35 @@
             min-height: 100vh;
         }
 
+        /* --- COMPACT HORIZONTAL HEADER --- */
         .header {
-            text-align: center;
+            display: flex;
+            flex-direction: row; /* Aligns logo and text side-by-side */
+            align-items: center; /* Centers items vertically */
+            justify-content: center; /* Centers the whole bar horizontally */
+            gap: 20px; /* Space between logo and text */
             margin-bottom: 3rem;
+            padding: 10px;
+        }
+
+        .header img {
+            height: 50px; /* Compact height to match text scale */
+            width: auto;
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));
         }
 
         .header h1 {
-            font-size: 3.5rem;
-            letter-spacing: 8px;
+            font-size: 2.8rem; /* Slightly smaller for a compact look */
+            letter-spacing: 6px;
             background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
+            margin: 0;
             font-weight: 800;
+            text-transform: uppercase;
         }
 
+        /* --- HERO & GRID STYLES --- */
         .hero-box {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -117,23 +131,18 @@
         .btn:hover { background: var(--accent-blue); border-color: var(--accent-blue); color: #000; }
         .btn-git:hover { background: var(--accent-purple); border-color: var(--accent-purple); color: #fff; }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-blue), var(--accent-purple), transparent);
-        }
-
         @media (max-width: 768px) {
+            .header { flex-direction: row; gap: 10px; }
+            .header h1 { font-size: 1.8rem; letter-spacing: 3px; }
+            .header img { height: 40px; }
             .btn-group { flex-direction: column; }
-            .btn { padding: 12px; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="https://raw.githubusercontent.com/Chandan250401/Simplitix.in/main/image.png" alt="Simplitix Logo">
+        <img src="https://raw.githubusercontent.com/Chandan250401/Simplitix.in/main/image.png" alt="Simplitix Logo"> 
         <h1>SIMPLITIX</h1>
     </div>
 
